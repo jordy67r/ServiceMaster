@@ -1,0 +1,16 @@
+.head_background
+  .head_container
+    .head.clearfix
+      = image_tag("carpets-1.png")
+      %p E. INFO@SERVICEMASTERNORWICH.CO.UK
+      %p T. 0330 400 8888
+      .menu_button
+        %a#nav-toggle{:href => "#"}
+          %span
+      %ul.menu
+        %li= link_to 'HOME', root_path
+        %li= link_to 'ABOUT US', about_path
+        %li= link_to 'CONTACT US', enquiries_path
+        %li= link_to 'CLEANING SERVICES', cleaning_services_services_path
+        %li= link_to 'DISASTER AND RECOVERY', disaster_and_recovery_services_path
+        %li= link_to 'INSURANCE WORK', insurance_work_services_path

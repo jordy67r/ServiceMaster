@@ -1,0 +1,947 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "avariables.scss";
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body {
+	font-family: "Proxima Nova", "proxima-nova", sans-serif;
+  background-color: #FAF7F7;
+}
+/*Header*/
+.head_background {
+	background-color: $yellow;
+	.head_container {
+    padding: 10px 0 40px;
+		max-width: 1024px;
+		margin: 0 auto;
+		background-color: $yellow;
+		.head {
+			width: 100%;
+			background-color: $yellow;
+			img {
+				float: left;
+        width: 270px;
+			}
+			p {
+				float: right;
+				padding: 28px 50px 0 0;
+				font-weight: 300;
+				color: $blue;
+			}
+      /*MOBILE MENU BUTTON*/
+      .menu_button {
+          margin: 0;
+          float: right;
+          display: none;
+        }
+      #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: $blue;
+        position: absolute;
+        display: none;
+        content: '';
+      }
+      #nav-toggle span:before {
+        top: -10px;
+      }
+      #nav-toggle span:after {
+        bottom: -10px; 
+      }
+      #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+        transition: all 500ms ease-in-out;
+      }
+      #nav-toggle.active span {
+        background-color: transparent;
+      }
+      #nav-toggle.active span:before, #nav-toggle.active span:after {
+        top: 0;
+      }
+      #nav-toggle.active span:before {
+        transform: rotate(45deg);
+      }
+      #nav-toggle.active span:after {
+        transform: rotate(-45deg);
+      }
+      /*Menu List*/
+			ul {
+				display: block;
+				clear: right;
+				float: right;
+				padding: 0 50px 10px 0;
+        margin-top: 0;
+				li {
+					display: inline-block;
+					padding: 0 0 0 10px;
+					a {
+						color: $blue;
+						text-transform: uppercase;
+						text-decoration: none;
+						font-weight: 600;
+            &:hover {
+              border-bottom: 3px solid $blue;
+              background-color: $yellow;
+            }
+            &:active {
+              border-bottom: 3px solid $blue;
+              background-color: $yellow;
+            }  
+					}
+				}
+			}
+      .mobile {
+        text-align: center;
+        color: $yellow;
+        background-color: $blue;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        li {
+          display:block;
+          padding: 10px 0;
+          a {
+            color: $yellow;
+            letter-spacing: 1px;
+            &:hover {
+              border-bottom: 3px solid $light-blue;
+              background-color: $blue;
+            }
+          }
+        }
+      }
+		}
+	}
+}
+/*FOOT*/
+.outer_footer{
+  background-color: $charcol;
+  width: 100%;
+  padding: 50px 0 1px;
+  margin: -50px 0 0;
+  clear: both;
+  .footer_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: $charcol;
+    .footer {
+      padding: 20px 0 0;
+      img {
+        float: left;
+        width: 200px;
+        padding: 30px 0 0 50px;
+      }
+      .footer_menu {
+        float: right;
+        padding: 0 70px 0 0;
+        li {
+          list-style: none;
+          line-height: 20px;
+          a {
+            text-decoration: none;
+            color: #BAB4B4;
+          }
+        }
+      }
+      .address {
+        float: right;
+        text-align: right;
+        padding: 0 10px 0 0;
+        li {
+          text-decoration: none;
+          list-style: none;
+          color: $off-white;
+          line-height: 20px;
+        }
+      }
+      p {
+        clear: both;
+        text-align: center;
+        color: $off-white;
+        padding: 20px 0 0;
+        bottom:0;
+      }
+    }
+  } 
+}
+/*Home*/
+.head_image_container {
+	background-image: url('hero.jpg');
+  padding: 1px;
+	.head_image {
+		background-color: rgba(231,230,237,0.8);
+		padding: 15px 50px;
+		text-align: center;
+		margin: 150px auto 200px;
+		width: 500px;
+    h2 {
+      font-size: 46px;
+      line-height: 55px;
+      letter-spacing: 3px;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+    p {
+      font-size:22px; 
+    }
+	}
+}
+.center_container {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+.case_buttons {
+  ul {
+    display: block;
+    margin: -130px auto -40px;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 0 20px;
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: $blue;
+        background-color: rgba(249, 249, 50, 0.7);
+        text-transform: uppercase;
+        display: block;
+        p {
+          display: block;
+          padding: 40px 30px;
+          width: 225px;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+        h3 {
+          display: none;
+        }
+      }
+      .tab_on {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+.display_case {
+  background-color: $light-blue;
+  padding: 50px;
+  margin: -20px 0 0;
+  box-shadow: $shadow;
+  h4 {
+    width: 60%;
+    color: $white;
+    float: left;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+  p {
+    width: 60%;
+    color: #EAE6E6;
+    float: left;
+    font-weight: 300;
+  }
+  .read_more {
+    clear: both;
+    float: left;
+    padding: 45px 0;
+    a{
+      text-decoration: none;
+      color: $blue;
+      text-transform: uppercase;
+      padding: 10px 70px 10px 40px;
+      background-color: $yellow;
+      background-image: url("arrow_button.png");
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      box-shadow: $shadow;
+    }
+  }
+  img {
+    border-radius: 150%;
+    width: 30%;
+    top: 0;
+    margin: 20px 0 0 86px;
+    box-shadow: $shadow;
+  }
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 29px 20px 0 20px;
+  border-color: $yellow transparent transparent transparent;
+  margin: -28px 0 0 115px;
+}
+.triangle1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 29px 20px 0 20px;
+  border-color: $yellow transparent transparent transparent;
+  margin: -28px 0 0 440px;
+}
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 29px 20px 0 20px;
+  border-color: $yellow transparent transparent transparent;
+  margin: -28px 0 0 770px;
+}
+.content_container {
+  box-shadow: 9px 0px 20px -7px rgba(0, 0, 0, 0.3), -9px 0px 20px -7px rgba(0, 0, 0, 0.3);
+  background-color: $white;
+}
+.info {
+  width:40%;
+  padding: 5%;
+  float: left;
+  h2 {
+    line-height: 32px;
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+  p {
+    padding: 20px 0;
+    font-weight: 300;
+    color: $grey;
+  }
+  div {
+    background-color: $blue;
+    color: $yellow;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: $shadow;
+    p {
+      font-size: 26px;
+      line-height: 37px;
+      letter-spacing: 1px;
+      margin: -15px 0;
+      float: left;
+      color: $yellow;
+    }
+    h5 {
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    img {
+      float: right;
+      margin: -182px -22px 0 0;
+      width: 133px;
+    }
+  }
+}
+.contact {
+  width:40%;
+  float: right;
+  padding: 5%;
+  h4 {
+    line-height: 32px;
+    letter-spacing: 1px;
+    font-weight: 200;
+  }
+  h2 {
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  div {
+    background-color: $yellow;
+    border-radius: 10px;
+    width: 80%;
+    padding: 5% 10%;
+    height: 363px;
+    box-shadow: $shadow;
+    form {
+      color: $blue;
+      text-transform: uppercase;
+      input {
+        width: 100%;
+        margin: 0 0 10px;
+      }
+      textarea {
+        max-width: 100%;
+        min-width: 100%;
+      }
+      .color_button {
+        text-decoration: none;
+        color: $yellow;
+        text-transform: uppercase;
+        padding: 10px 34px 10px 2px;
+        background-color: $light-blue;
+        background-image: url("blue-button.png");
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        width: 40%;
+        border: none;
+        box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.3);
+        margin: 20px 0 0;
+        float: right;
+      }
+    }
+  }
+}
+.banner {
+  clear:both;
+  img  {
+    max-width: 1024px;
+  }
+}
+.quote {
+  clear: both;
+  background-color: $white;
+  padding: 0 0 20px;
+  text-align: center;
+  img {
+    width: 200px;
+    margin: 20px 0 0;
+  }
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+  }
+  h3 {
+    text-align: center;
+    font-weight: 300;
+    color: $grey;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+/*pages*/
+.page_head {
+  text-align: left;
+  padding: 50px;
+  background-color: $blue;
+  margin: -20px 0 0;
+  h2,h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $yellow;
+    font-size: 26px;
+  }
+  h4 {
+    color: $white;
+    font-weight: 300;
+  }
+}
+.page_body {
+  background-color: $white;
+  padding: 50px;
+  p {
+    clear: both;
+  }
+}
+.image_row {
+  text-align: center;
+  img {
+    width: 275px;
+    margin: 10px;
+    box-shadow: $shadow;
+  }
+}
+/*CONTACT*/
+.form {
+  padding: 50px 50px 0;
+  float: left;
+}
+.fieldname, .fieldemail {
+  padding: 0 0 20px;
+  label {
+    display: block;
+    text-transform: uppercase;
+  }
+  input {
+    display: block;
+    width: 500px;
+  }
+}
+.fieldbody {
+  padding: 0 0 20px;
+  label {
+    display: block;
+    text-transform: uppercase;
+  }
+  textarea {
+    display: block;
+    width: 500px;
+    max-width: 500px;
+    height: 200px;
+    max-height: 400px;
+  }
+}
+.action_button {
+  padding: 0 0 20px;
+  input {
+    text-decoration: none;
+    color: $blue;
+    text-transform: uppercase;
+    padding: 10px 70px 10px 40px;
+    background-color: $yellow;
+    background-image: url("arrow_button.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    border: none;
+    box-shadow: $shadow;
+  }
+}
+.action_button_2 {
+  padding: 0 0 20px;
+  input {
+    text-decoration: none;
+    color: $blue;
+    text-transform: uppercase;
+    padding: 10px 40px 10px 40px;
+    background-color: $yellow;
+    border: none;
+  }
+}
+.back_button {
+  text-decoration: none;
+  color: $blue;
+  text-transform: uppercase;
+  padding: 10px 40px 10px 40px;
+  background-color: $yellow;
+  border: none;
+  clear: both;
+  float: left;
+  margin: 0 0 50px 50px;
+  &:hover {
+    background-color: $yellow;
+    color: $blue;
+  }
+}
+.contact_image {
+  img {
+    display: block;
+    float: right;
+    margin: 67px 50px 50px;
+    box-shadow: $shadow;
+  }
+}
+.service_show {
+  padding: 50px;
+  background-color: $white;
+}
+/*SERVICES*/
+.service_index_table {
+  border-collapse: collapse;
+  width: 76%;
+  float: right;
+  ul { 
+    li {
+      list-style: none;
+      line-height: 30px;
+      a {
+        text-decoration: none;
+        background-color: rgba(255, 242, 0, 0);
+        color: $blue;
+        border-bottom: 2px solid $blue;
+        &:hover {
+          background-color: rgba(255, 242, 0, 0);
+          color: $blue;
+          border-bottom: 2px solid $blue;
+        }
+      }
+    }
+  }
+} 
+.service_menu {
+  width: 24%;
+  float: left;
+  h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 22px
+  }
+  ul {
+    padding: 0;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 18px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        &:hover {
+          background-color: transparent;
+          color: #000;
+        }
+      }
+    }
+    ul {
+      li {
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+      }
+    }
+  }
+  .headul {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 1024px) /* upto 850px*/ {
+  .head {
+    img {
+        width: 208px;
+        padding: 0 0 0 20px;
+    }
+  }
+  .head_image_container {
+    .head_image {
+      width: 300px;
+      padding: 1px 50px;
+      h2 {
+        font-size: 34px;
+        line-height: 30px;
+      }
+    }
+  }
+  .center_container {
+    width: 800px;
+  }
+  .case_buttons {
+    ul {
+      li {
+        padding: 0 8px;
+        a {
+          p {
+            padding: 20px 5px;
+            width: 200px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .display_case {
+    .triangle {
+      margin: -28px 0 0 100px;
+    }
+    .triangle1 {
+      margin: -28px 0 0 330px;
+    }
+    .triangle2 {
+      margin: -28px 0 0 560px;
+    }
+    img {
+      margin: 20px 0 0 60px;
+    }
+  }
+  .info {
+    div {
+      img {
+        width: 110px;
+          margin: -162px -32px 0 0;
+      }
+    }
+  }
+  .contact {
+    div {
+      height: 388px;
+    }
+  }
+  .banner {
+    img {
+      width: 800px
+    }
+  }
+  .outer_footer {
+    .footer_container {
+      max-width: 800px;
+      .footer {
+        .footer_menu {
+          padding: 0 30px 0 0;
+        }
+      }
+    }
+  }
+  /*About*/
+  .image_row {
+    img {
+      width: 200px;
+    }
+  }
+  /*CONTACT*/
+  .fieldname, .fieldemail {
+    input {
+      max-width: 360px;
+    }
+  }
+  .fieldbody {
+    textarea {
+      max-width: 360px;
+    }
+  }
+  .contact_image {
+    img {
+      margin: 76px 34px 50px 0;
+    }
+  }
+  /*SERVICES*/
+}
+@media screen and (max-width: 850px) /* upto 600px*/{
+  .head_background { 
+    .head_container {
+      padding: 10px 0 24px;
+      .head { 
+        img {
+          padding: 0 0 10px 20px;
+        }
+        p {
+          padding: 0 50px 0 0;
+          display: none;
+        }
+        .menu_button {
+          margin: 50px 110px 0 0;
+          float: right;
+          display: block;
+        }
+        #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+          cursor: pointer;
+          border-radius: 1px;
+          height: 5px;
+          width: 35px;
+          background: $blue;
+          position: absolute;
+          display: block;
+          content: '';
+        }
+        ul {
+          display: none;
+        }
+      } 
+    }
+  }
+  .head_image_container {
+    .head_image {
+      margin: 50px auto 150px;
+    }
+  }
+  .center_container {
+    width: 600px;
+  }
+  .case_buttons {
+    ul {
+      li {
+        a {
+          p {
+            display: none;
+            padding: 20px 5px;
+            width: 200px;
+            font-size: 16px;
+          }
+          h3 {
+            display: block;
+            padding: 15px 0px;
+            width: 150px;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .display_case {
+    .triangle {
+      border-width: 24px 20px 0 20px;
+      margin: -28px 0 0 60px;
+    }
+    .triangle1 {
+      border-width: 24px 20px 0 20px;
+      margin: -28px 0 0 230px;    }
+    .triangle2 {
+      border-width: 24px 20px 0 20px;
+      margin: -28px 0 0 400px;
+    }
+    img {
+      margin: 90px 25px 0;
+    }
+  }
+  .info {
+    width: 90%;
+    div {
+      img {
+        width: 138px;
+        margin: -147px -20px 0 0;
+      }
+      h5 {
+        padding: 15px 0 7px 0px;
+        font-size: 17px;
+      }
+    }
+  }
+  .contact {
+    width: 90%;
+  }
+  .banner {
+    img {
+      width: 600px;
+    }
+  }
+  .quote {
+    p {
+      font-size: 212px; 
+      margin: 120px 0 26px;
+    }
+    h2 {
+      font-size: 17px;
+    }
+    img {
+      width: 170px;
+    }
+  }
+  .outer_footer {
+    .footer_container {
+      max-width: 600px;
+      .footer {
+        .footer_menu {
+          display: none;
+        }
+      }
+    }
+  }
+  /*ABOUT*/
+  .image_row {
+    img {
+      width: 150px;
+    }
+  }  
+  /*CONTACT*/
+  .fieldname, .fieldemail {
+    input {
+      max-width: 490px;
+    }
+  }
+  .fieldbody {
+    textarea {
+      max-width: 490px;
+    }
+  }
+  .contact_image {
+    img {
+      display: none;
+    }
+  }
+  /*SERVICES*/
+  .service_menu {
+    display: none;
+  }
+  .service_index_table {
+    width: 100%;
+    ul {
+      padding: 0;
+    }
+  }
+}
+@media screen and (max-width: 600px) /* upto 480px*/{
+  .head {
+    img {
+      width: 180px;
+    }
+  }  
+  .contact {
+    width: 90%;
+  }
+  .center_container {
+    width: 480px;
+  }
+  .case_buttons {
+    ul {
+      li {
+        a {
+          p {
+            padding: 20px 5px;
+            width: 200px;
+            font-size: 16px;
+          }
+          h3 {
+            padding: 15px 0px;
+            width: 120px;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .display_case {
+    img {
+      display: none;
+    }
+    h4,p {
+      width: 100%;
+    }
+    .triangle {
+      margin: -28px 0 0 30px;
+    }
+    .triangle1 {
+      margin: -28px 0 0 170px;
+    }
+    .triangle2 {
+      margin: -28px 0 0 310px;
+    }
+  }
+  .info {
+    width: 90%;
+    div {
+      img {
+        width: 120px;
+        margin: -200px 5px 0 0;
+      }
+      p {
+        margin: 0;
+      }
+      h5 {
+        padding: 0;
+        margin: 0 0 18px;
+      }
+    }
+  }
+  .banner {
+    img {
+      width: 480px;
+    }
+  }
+  .quote {
+    img {
+      width: 150px;
+    }
+    h2 {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  }
+  .outer_footer {
+    .footer_container {
+      max-width: 480px;
+    }
+  }
+  /*SERVICES*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

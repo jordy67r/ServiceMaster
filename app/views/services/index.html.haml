@@ -1,0 +1,19 @@
+.center_container
+  .content_container
+    .page_head
+      %h2 Cleaning Services
+    .page_body.clearfix
+      %div.service_index_table
+        %ul
+          - @services.each do |service|
+            %li
+              .services
+                %h2= service.title.titleize
+                %p
+                  = truncate(service.body.html_safe, :length => 400, :escape => false)
+                  = link_to " More", service
+      .service_menu
+        %h2 Services
+        = render "service_sidebar"
+
+

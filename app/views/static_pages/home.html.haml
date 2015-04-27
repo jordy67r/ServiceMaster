@@ -1,0 +1,82 @@
+!!!
+%html
+  %head
+    %title Home
+  %body
+    .head_image_container.clearfix
+      .head_image
+        %h2 QUICK RELIABLE <br> CARPET CLEANING 
+        %p CALL 01760 441 032
+    .center_container.clearfix
+      .case_buttons
+        %ul.tabs
+          %li
+            %a{:href => "#tab1"} 
+              %P Cleaning Services
+              %h3 Cleaning
+          %li
+            %a{:href => "#tab2"} 
+              %P Disaster and Recovery
+              %h3 Disaster
+          %li
+            %a{:href => "#tab3"} 
+              %P Insurance Work
+              %h3 Insurance
+        #tab1
+          .display_case.clearfix
+            .triangle
+            %h4 Lorem ipsum dolor sit amet, ea eam idque admodum vituperata. In prima partiendo dissentiunt eam, quaestio dissentiunt vix id. Ei pri vitae detraxit, vel electram reprehendunt in, paulo salutatus reprehendunt eos at. Duo labore facete at, usu mazim eligendi partiendo ne.
+            %p Ad vix clita saepe signiferumque, sed modo dicit veniam an, vel minimum definiebas ut. Ne eam placerat vituperata. Illum animal qui ad, prima veritus mea et. Congue vocent periculis ea sed, te pri vitae indoctum. Voluptua ocurreret repudiandae qui id.
+            .read_more= link_to 'Read More', 'services_path'
+            %img{:src => "wine.jpg"}
+        #tab2
+          .display_case.clearfix
+            .triangle1
+            %h4  dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine., vel illum qui dolorem eumue nihil impedit quo minus id quod maxime placeat facere
+            %p  fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, sim.
+            .read_more= link_to 'Read More', 'services_path'
+            %img{:src => "wine.jpg"}
+        #tab3
+          .display_case.clearfix
+            .triangle2
+            %h4 Lorem ipsum dolor sit amet, ea eam idque admodum vituperata. In prima partienout on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops
+            %p Ad vix clita saepe signiferumque, sed modo dicit veniam an, vel minimum definiebas ut. Ne eam placerat vituperata. Illum animal qui ad, prima veritus mea et. Congue vocent periculis ea sed, te pri vitae indoctum. Voluptua ocurreret repudiandae qui id.
+            .read_more= link_to 'Read More', 'services_path'
+            %img{:src => "wine.jpg"}
+      
+      .content_container.clearfix
+        .info
+          %h2 COMPLETE CARPET CLEANING FROM SERVICE MASTER NORFOLK
+          %p As a family run business with over 20 years experience, ServiceMaster Norfolk have the expertise and experience to help with all of your carpet and floor cleaning needs.<br><br>As a team, we aim to have your carpet, floors and upholstery sparkling clean in no time at all. <br><br>with a 24/7 emergency call out service, you can rest asured ServiceMaster Norfolk are the cleaning company <br>always on hand to help.
+          %div.clearfix 
+            %p 01760 441 032<br>06912 597 904
+            %h5 INFO@SERVICEMASTERNORWICH.CO.UK
+            = image_tag("phone-1.png")
+        .contact
+          %h2 NEED HELP?
+          %h4 Leave your details below and we'll get in touch
+          %div
+            %form
+              name
+              %br
+              %input{:name => "name", :type => "text"}
+              %br
+              email
+              %br
+              %input{:name => "email", :type => "text"}
+              %br
+              phone no. (optional)
+              %br
+              %input{:name => "phoneno", :type => "text"}
+              %br
+              Enquiry
+              %br
+              %textarea{:cols => "25", :rows => "7"}
+              %br
+              %input.color_button{:type => "submit", :value => "Send"}
+        .banner
+          = image_tag("beforeafter.png")
+        .quote
+          = image_tag("quotes.png")
+          %h2 EXEMPLORARY SERVICE LEFT OUT CARPET LOOKING BRAND NEW
+          %h3 - Mary, Norwich

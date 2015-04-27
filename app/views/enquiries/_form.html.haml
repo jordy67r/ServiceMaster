@@ -1,0 +1,20 @@
+= form_for @enquiry do |f|
+  - if @enquiry.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@enquiry.errors.count, "error")} prohibited this enquiry from being saved:"
+      %ul
+        - @enquiry.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form
+    .fieldname
+      = f.label :name
+      = f.text_field :name
+    .fieldemail
+      = f.label :email
+      = f.text_field :email
+    .fieldbody
+      = f.label :message
+      = f.text_area :body
+    .action_button
+      = f.submit 'Save'

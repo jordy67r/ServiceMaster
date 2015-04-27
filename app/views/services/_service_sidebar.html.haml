@@ -1,0 +1,19 @@
+
+%ul
+  %li
+    = link_to "Cleaning Services", cleaning_services_services_path
+    %ul.headul
+      - @cleaning_services.each do |service|
+        %li= link_to service.title, service
+  %li
+    = link_to "Disaster and Recovery", disaster_and_recovery_services_path
+    %ul.headul
+      - @disaster_services.each do |service|
+        %li= link_to service.title, service
+  %li
+    = link_to "Insurance Work", insurance_work_services_path
+    %ul.headul
+      - @insurance_services.each do |service|
+        %li= link_to service.title, service
+
+
