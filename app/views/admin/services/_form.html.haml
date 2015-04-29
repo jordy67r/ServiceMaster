@@ -1,0 +1,19 @@
+= form_for [:admin, @service] do |f|
+  - if @service.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@service.errors.count, "error")} prohibited this service from being saved:"
+      %ul
+        - @service.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form
+    .fieldname
+      = f.label :title
+      = f.text_field :title
+    .field
+      = f.select :service_type, ["Cleaning services", "Disaster and Recovery", "Insurance Work"]
+    .fieldbody
+      = f.label :body
+      = f.text_area :body
+    .action_button_2
+      = f.submit 'Save'

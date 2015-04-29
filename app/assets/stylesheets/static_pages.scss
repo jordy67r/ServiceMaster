@@ -273,28 +273,20 @@ body {
     box-shadow: $shadow;
   }
 }
-.triangle {
+.triangle, .triangle1, .triangle2 {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 29px 20px 0 20px;
   border-color: $yellow transparent transparent transparent;
+}
+.triangle {
   margin: -28px 0 0 115px;
 }
 .triangle1 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 29px 20px 0 20px;
-  border-color: $yellow transparent transparent transparent;
   margin: -28px 0 0 440px;
 }
 .triangle2 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 29px 20px 0 20px;
-  border-color: $yellow transparent transparent transparent;
   margin: -28px 0 0 770px;
 }
 .content_container {

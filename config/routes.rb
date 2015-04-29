@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :services do
+  resources :services, only: [:show, :index] do
     collection do
       get :cleaning_services 
       get :disaster_and_recovery
@@ -21,6 +21,9 @@ Rails.application.routes.draw do
 
   match "/insurance-work", to: "static_pages#insurance", via: "get"
 
+  namespace :admin do
+    resources :services, only: [:edit, :index, :destroy, :new, :update, :create]
+  end
 
 
   

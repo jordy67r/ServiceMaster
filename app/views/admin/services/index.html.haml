@@ -1,0 +1,18 @@
+%h1 Services
+%table
+  %thead
+    %tr
+      %th Title
+      %th
+      %th
+      %th
+  %tbody
+    - @services.each do |service|
+      %tr
+        %td= service.title
+        %td= link_to "show", service
+        %td= link_to "edit", edit_admin_service_path(service)
+        %td= link_to "delete", [:admin, service], method: :delete, data: {confirm: "are you sure?!"}
+
+
+
